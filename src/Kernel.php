@@ -9,3 +9,17 @@ class Kernel extends BaseKernel
 {
     use MicroKernelTrait;
 }
+
+class AppKernel extends Kernel
+{
+    public function registerBundles(): iterable
+    {
+        $bundles = [
+            // ...
+
+            new Nelmio\ApiDocBundle\NelmioApiDocBundle(),
+        ];
+
+        // ...
+    }
+}
